@@ -1,0 +1,46 @@
+{
+    "name": "unifarm-vesting",
+    "version": "1.0.0",
+    "description": "Built in Vesting Features Contracts",
+    "main": "index.js",
+    "author": "Unifarm Contracts",
+    "license": "MIT",
+    "scripts": {
+        "prettier": "prettier --write 'contracts/**/*.sol'",
+        "deploy:factory": "hardhat run ./scripts/deploy-factory.ts --network testnet",
+        "deploy:book": "hardhat run ./scripts/deploy-book.ts --network testnet",
+        "deploy:mock": "hardhat run ./scripts/deploymock.ts --network testnet",
+        "verify": "hardhat verify 0x7A56B5d6F26c81804a4D44DE43ae8Ffe80e99a05 0x828954676f2634d404251f05e4f619ff83f7eceb 1620974781 1620888381 1628664381 1620974781 0x30148a43c5f0ded8993148a2d3f35b2b2ea54f48 --network testnet",
+        "test": "hardhat test",
+        "coverage": "hardhat coverage",
+        "compile": "hardhat compile",
+        "flatten:factory": "hardhat flatten ./contracts/UnifarmFactory.sol > ./flatten/UnifarmFactory.sol",
+        "flatten:book": "hardhat flatten ./contracts/UFARMBeneficiaryBook.sol > ./flatten/UFARMBeneficiaryBook.sol",
+        "flatten:vesting": "hardhat flatten ./contracts/UnifarmVesting.sol > ./flatten/UnifarmVesting.sol"
+    },
+    "devDependencies": {
+        "@nomiclabs/hardhat-ethers": "^2.0.2",
+        "@nomiclabs/hardhat-waffle": "^2.0.1",
+        "@types/chai": "^4.2.16",
+        "@types/mocha": "^8.2.2",
+        "@types/node": "^14.14.37",
+        "chai": "^4.3.4",
+        "hardhat": "^2.2.1",
+        "prettier": "^2.2.1",
+        "prettier-plugin-solidity": "^1.0.0-beta.7",
+        "ts-node": "^9.1.1",
+        "typescript": "^4.2.3"
+    },
+    "dependencies": {
+        "@nomiclabs/hardhat-etherscan": "^2.1.1",
+        "@openzeppelin/contracts": "3.4.1",
+        "@openzeppelin/contracts-upgradeable": "^4.0.0",
+        "bluebird": "^3.7.2",
+        "dotenv": "^8.2.0",
+        "ethereum-waffle": "^3.3.0",
+        "ethers": "^5.1.0",
+        "hardhat-gas-reporter": "^1.0.4",
+        "lodash": "^4.17.21",
+        "solidity-coverage": "^0.7.16"
+    }
+}
