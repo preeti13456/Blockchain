@@ -33,12 +33,12 @@
     },
     "dependencies": {
         "@nomiclabs/hardhat-etherscan": "^2.1.1",
-        "@openzeppelin/contracts": "4.4.1",
+        "@openzeppelin/contracts": "4.4.2",
         "@openzeppelin/contracts-upgradeable": "^4.4.1",
         "bluebird": "^3.7.2",
         "dotenv": "^8.2.0",
         "ethereum-waffle": "^3.3.0",
-        "ethers": "^5.1.0",
+        "ethers": "^5.3.0",
         "hardhat-gas-reporter": "^1.0.4",
         "lodash": "^4.17.21",
         "solidity-coverage": "^0.7.16"
